@@ -1,10 +1,12 @@
 import "./button.css";
 
-const Button = () => {
+const Button = ({ handleNewGame }) => {
   return (
     <>
-      <div>
-        <button className = "StartButton">New Game</button>
+      <div className="button-container">
+        <button onClick={handleNewGame} className="startButton">
+          New Game
+        </button>
       </div>
     </>
   );

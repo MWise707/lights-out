@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Tile from "../tile/Tile.jsx";
 import "./board.css";
-import Button from "../button/Button.jsx"
+import Button from "../button/Button.jsx";
 
 const Board = () => {
   const [tileStates, setTileStates] = useState(
@@ -11,6 +11,16 @@ const Board = () => {
       ).flat()
     )
   );
+
+  const handleNewGame = () => {
+    setTileStates((prevStates) => {
+      const newStates = {};
+      for (const key in prevStates) {
+        newStates[key] = Math.random() < 0.5;
+      }
+      return newStates;
+    });
+  };
 
   const handleTileClick = (row, column) => {
     setTileStates((prevStates) => {
@@ -49,7 +59,7 @@ const Board = () => {
   return (
     <>
       <div className="board">{tiles}</div>
-      <Button/>
+      <Button handleNewGame={handleNewGame} />
     </>
   );
 };

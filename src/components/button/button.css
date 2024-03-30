@@ -1,5 +1,9 @@
+.button-container {
+  margin-top: 10px;
+  display: flex;
+}
 
-.StartButton {
-    display:flex;
-    transform: translate(50%, 80%);
+.startButton {
+  display: flex;
+  transform: translate(120%, 80%);
 }
