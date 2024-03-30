@@ -1,0 +1,11 @@
+.header-container {
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100vw;
+  height: 5em;
+  background-color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: x-large;
+  color: black;
+}
