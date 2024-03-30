@@ -17,6 +17,15 @@
   transition:0.5s;
 }
 
+.lightbulb-on:hover {
+  transition: 0.5s;
+  border: 6px solid lightgray;
+}
+
+.lightbulb-off:hover {
+  transition: 0.5s;
+  border: 6px solid lightgray;
+}
 
 
 
