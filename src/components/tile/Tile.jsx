@@ -1,15 +1,17 @@
-import { useState } from "react";
-import "./tile.css";
+import React, { useState } from 'react';
+import './tile.css';
 
 const Tile = () => {
+  const [isOn, setIsOn] = useState(true);
+
+  const handleClick = () => {
+    setIsOn(prevState => !prevState);
+  };
+
   return (
-    <>
-      <div className="tile-container">
-        <div className="lightbulb">
-          <p>Hello World</p>
-        </div>
-      </div>
-    </>
+    <div className='tile-container'>
+      <div className={isOn ? 'lightbulb-on' : 'lightbulb-off'} onClick={handleClick}></div>
+    </div>
   );
 };
 
