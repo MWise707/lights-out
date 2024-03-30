@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import './tile.css';
+import React, { useState } from "react";
+import "./tile.css";
 
-const Tile = ( { handleTileClick, row, column } ) => {
-  const [isOn, setIsOn] = useState(true);
+const Tile = ({ handleTileClick, row, column, isOn }) => {
   const [isHover, setIsHover] = useState(false);
 
   const handleClick = () => {
-    setIsOn(prevState => !prevState);
     handleTileClick(row, column);
   };
 
@@ -15,18 +13,18 @@ const Tile = ( { handleTileClick, row, column } ) => {
   };
 
   const handleMouseLeave = () => {
-    setIsHover(false)
-  }
+    setIsHover(false);
+  };
 
   return (
-    <div className='tile-container'>
-      <div onMouseEnter={handleHover} 
-      onMouseLeave={handleMouseLeave}
-      style = {{ border : isHover ? '6px solid lightgray' : '4px solid white'}}
-      className={isOn ? 'lightbulb-on' : 'lightbulb-off'} 
-      onClick={handleClick}>
-
-      </div>
+    <div className="tile-container">
+      <div
+        onMouseEnter={handleHover}
+        onMouseLeave={handleMouseLeave}
+        style={{ border: isHover ? "6px solid lightgray" : "4px solid white" }}
+        className={isOn ? "lightbulb-on" : "lightbulb-off"}
+        onClick={handleClick}
+      ></div>
     </div>
   );
 };
