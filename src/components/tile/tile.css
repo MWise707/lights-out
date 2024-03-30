@@ -4,3 +4,9 @@
   border: solid;
   background-color: yellow;
 }
+
+#lightbulb {
+  background-color: yellow;
+  width:20px;
+  height:20px;
+}
