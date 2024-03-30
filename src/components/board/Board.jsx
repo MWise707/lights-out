@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Tile from "../tile/Tile.jsx";
 import "./board.css";
+import Button from "../button/Button.jsx"
 
 const Board = () => {
   const [tileStates, setTileStates] = useState(
@@ -45,7 +46,12 @@ const Board = () => {
     ))
   );
 
-  return <div className="board">{tiles}</div>;
+  return (
+    <>
+      <div className="board">{tiles}</div>
+      <Button/>
+    </>
+  );
 };
 
 export default Board;
