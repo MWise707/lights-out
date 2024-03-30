@@ -1,0 +1,5 @@
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns */
+  grid-gap: 10px; /* Adjust the gap between tiles */
+}
