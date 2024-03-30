@@ -1,4 +1,4 @@
-import Tile from "/Users/markwiseman/Documents/GitHub/lights-out/src/components/tile/Tile.jsx";
+import Tile from "../tile/Tile.jsx";
 import "./board.css";
 
 const Board = () => {
