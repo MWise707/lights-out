@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import './tile.css';
 
-const Tile = () => {
+const Tile = ( { handleTileClick, row, column } ) => {
   const [isOn, setIsOn] = useState(true);
   const [isHover, setIsHover] = useState(false);
 
   const handleClick = () => {
     setIsOn(prevState => !prevState);
+    handleTileClick(row, column);
   };
 
   const handleHover = () => {
