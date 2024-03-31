@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Tile from "../tile/Tile.jsx";
 import "./board.css";
 import Button from "../button/Button.jsx";
@@ -11,6 +11,10 @@ const Board = () => {
       ).flat()
     )
   );
+
+  useEffect(() => {
+    handleNewGame();
+  }, []);
 
   const handleNewGame = () => {
     setTileStates((prevStates) => {
